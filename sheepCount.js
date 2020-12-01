@@ -1,7 +1,6 @@
-function countSheep(num) {
-	if (num === 0) return console.log('All sheep jumped over the fence');
-	console.log(`${num}: Another sheep jumps over the fence`);
-	countSheep(num - 1);
-}
-
-countSheep(6);
+(function countSheep(num) {
+	for(null; num > 0; num--){
+		console.log(`${num}: Another sheep jumps over the fence`);
+	}
+	console.log('All sheep jumped over the fence');
+})(90);
