@@ -1,5 +1,5 @@
 console.log((function makeAnagrams(str, base = '') {
-	if (str <= 1) return base;
+	if (str.length == 1) return base + str;
 	let result = [];
  for (let i = 0; i < str.length; i++) {
 	 // Create a new string, omitting the value at position i
