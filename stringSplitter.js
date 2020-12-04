@@ -1,8 +1,15 @@
-console.log((function stringSplitter(str, char, results = []){
-	if (!str.length) return results;
-	results.push(str.substr(0,1));
-	return 	stringSplitter(str.substr(1), char, results)
-	// .filter(c => c !== char);
-// TODO: finish this
+console.log((function stringSplitter(str, splitChar) {
+	if (str.length === 1 || !splitChar) return [str];
+	if (!str.length) return '';
+	const strArr = [];
+	let lastSplitCharInd = 0;
+	for (let i = 0; i < str.length; i++) {
+		if(str[i] === splitChar) {
+			strArr.push(str.substr(lastSplitCharInd, i - lastSplitCharInd));
+			lastSplitCharInd = i +1;
+		}
+	}
+	strArr.push(str.substr(lastSplitCharInd));
+	return strArr;
 })
 ('abc/2/t', '/'));
