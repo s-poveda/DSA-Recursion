@@ -1,4 +1,7 @@
 console.log((function reverseString(str) {
-	if (str.length <= 1) return str;
-	return str.substr(-1) + reverseString(str.substr(0, str.length -1));
-})('hello'));
+	let reversed = '';
+	for (let i = str.length - 1; i > -1; i--) {
+		reversed += str[i];
+	}
+	return reversed;
+})('this will be reversed'));
