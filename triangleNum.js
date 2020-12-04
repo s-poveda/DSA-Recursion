@@ -1,5 +1,10 @@
 console.log((function triangleNum(nth){
-	if (nth === 1) return 1;
-	return nth + triangleNum(nth -1);
+	let sum = 0;
+	if(nth === 0) return sum;
+	while (nth > 0) {
+		sum += nth;
+		nth--;
+	}
+	return sum;
 })
 (9));
