@@ -2,7 +2,10 @@ function factorial(num) {
 	if (num < 0) throw new Error('Number must be greater than 0');
 	if (num === 1 || num === 0) return num;
 	if (num === 2) return 2;
-	return factorial(num - 1) * num;
+	for (let i = num - 1; i > 0; i--) {
+		num *= i;
+	}
+	return num;
 }
 
 console.log(factorial(4));
